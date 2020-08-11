@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
+from django.utils.timezone import get_current_timezone
 import datetime
 
 from .models import Task
@@ -12,7 +13,7 @@ def task_list(request):
 
     search = request.GET.get('search')
     filter = request.GET.get('filter')
-    tasksDoneRecently = Task.objects.filter(done='done', updated_at__gt=datetime.datetime.now()-datetime.timedelta(days=30), user=request.user).count()
+    tasksDoneRecently = Task.objects.filter(done='done', updated_at__gt=datetime.datetime.now(tz=get_current_timezone())-datetime.timedelta(days=30), user=request.user).count()
     tasksDone = Task.objects.filter(done='done', user=request.user).count()
     tasksDoing = Task.objects.filter(done='doing', user=request.user).count()
 
