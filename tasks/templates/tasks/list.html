@@ -11,8 +11,10 @@
             </div>
         </a>
         <div class="col-9 search-div">
-            <input type="text" class="form-control" id="search" name="search" placeholder="Digite o nome da tarefa para buscar">
-            <i class="fas fa-search"></i>
+            <form method="GET" id="search-form">
+                <input type="text" class="form-control" id="search" name="search" placeholder="Digite o nome da tarefa para buscar" value="{{ request.GET.search }}">
+                <i class="fas fa-search" id="search-btn"></i>
+            </form>
         </div>
 
         {% if messages %}
@@ -32,6 +34,7 @@
                 </li>
             {% endfor %}
         </ul>
+
         {% if tasks.paginator.num_pages %}
         <div class="pagination">
             <span class="step-links">
