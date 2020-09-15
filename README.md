@@ -5,6 +5,7 @@ Aplicação web de um gerenciador de tarefas feito em Django
 - python - Versão 3.5+
 - Django==2.1.5
 - django-crispy-forms==1.7.2
+- python-decouple==3.3
 
 # Instalação
 1. Crie um ambiente virtual:
@@ -16,15 +17,19 @@ python3 -m venv myvenv
 ```
 (myvenv) pip install -r requirements.txt
 ```
-4. Sincronize a base de dados:
+4. Em seguida você vai precisar criar um arquivo .env:
+```
+(myvenv) python contrib/env_gen.py
+```
+5. Sincronize a base de dados:
 ```
 (myvenv) python manage.py migrate
 ```
-5. Crie um usuário (Administrador do sistema):
+6. Crie um super usuário (Administrador do sistema):
 ```
 (myvenv) python manage.py createsuperuser
 ```
-6. Teste a instalação carregando o servidor de desenvolvimento (http://localhost:8000 no navegador):
+7. Teste a instalação carregando o servidor de desenvolvimento (http://localhost:8000 no navegador):
 ```
 (myvenv) python manage.py runserver
 ```
