@@ -6,7 +6,7 @@ Meu primeiro projeto com django, uma aplicação web de um gerenciador de tarefa
 - CRUD
 - Dashboard simples das tarefas
 - Filtros simples para as tarefas
-- Template simples feita com Bootstrap
+- Templates resposivas e simples feitas com Bootstrap
 - Paginação
 - Mensagens
 
