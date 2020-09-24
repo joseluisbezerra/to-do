@@ -1,7 +1,7 @@
 # To-do
 Meu primeiro projeto com django, uma aplicação web de um gerenciador de tarefas
 
-# Funcionalidades
+# O que há no projeto
 - Sistema de autenticação
 - CRUD
 - Dashboard simples das tarefas
