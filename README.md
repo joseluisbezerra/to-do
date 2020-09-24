@@ -1,5 +1,14 @@
-# to-do
-Aplicação web de um gerenciador de tarefas feito em Django
+# To-do
+Meu primeiro projeto com django, uma aplicação web de um gerenciador de tarefas
+
+# Funcionalidades
+- Sistema de autenticação
+- CRUD
+- Dashboard simples das tarefas
+- Filtros simples para as tarefas
+- Template simples feita com Bootstrap
+- Paginação
+- Mensagens
 
 # Dependências
 - python - Versão 3.5+
