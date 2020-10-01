@@ -10,11 +10,6 @@ Meu primeiro projeto com django, uma aplicação web de um gerenciador de tarefa
 - Paginação
 - Mensagens
 
-# Modelo lógico
-<p align="center">
-  <img src="/contrib/logico.PNG" >
-</p>
-
 # Dependências
 - python - Versão 3.5+
 - Django==2.1.5
