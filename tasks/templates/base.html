@@ -24,9 +24,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/">Tarefas</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Usuários</a>
-                        </li>
                     {% else %}
                         <li class="nav-item">
                             <a class="nav-link" href="/accounts/login">Entrar</a>
@@ -35,10 +32,6 @@
                             <a class="nav-link" href="/accounts/register">Criar usuário</a>
                         </li>
                     {% endif %}
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre nós</a>
-                    </li>
 
                     {% if user.is_authenticated %}
                         <li class="nav-item">
