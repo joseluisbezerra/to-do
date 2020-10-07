@@ -1,5 +1,5 @@
 # To-do
-Meu primeiro projeto com django, uma aplicação web de um gerenciador de tarefas
+Aplicação web de um gerenciador de tarefas feito com o framework Django
 
 # O que há no projeto
 - Sistema de autenticação
