@@ -10,11 +10,6 @@ Aplicação web de um gerenciador de tarefas feito com o framework Django
 - Paginação
 - Mensagens
 
-# Dependências
-- python - Versão 3.5+
-- Django==2.1.5
-- django-crispy-forms==1.7.2
-- python-decouple==3.3
 
 # Instalação
 1. Crie um ambiente virtual:

@@ -8,12 +8,14 @@ import datetime
 from .models import Task
 from .forms import TaskForm
 
+
 @login_required
 def task_list(request):
 
     search = request.GET.get('search')
     filter = request.GET.get('filter')
-    tasksDoneRecently = Task.objects.filter(done='done', updated_at__gt=datetime.datetime.now(tz=get_current_timezone())-datetime.timedelta(days=30), user=request.user).count()
+    tasksDoneRecently = Task.objects.filter(done='done', updated_at__gt=datetime.datetime.now(
+        tz=get_current_timezone())-datetime.timedelta(days=30), user=request.user).count()
     tasksDone = Task.objects.filter(done='done', user=request.user).count()
     tasksDoing = Task.objects.filter(done='doing', user=request.user).count()
 
@@ -22,7 +24,8 @@ def task_list(request):
     elif (filter):
         tasks = Task.objects.filter(done=filter, user=request.user)
     else:
-        tasks_list = Task.objects.all().order_by('-created_at').filter(user=request.user)
+        tasks_list = Task.objects.all().order_by(
+            '-created_at').filter(user=request.user)
         paginator = Paginator(tasks_list, 3)
         page = request.GET.get('page')
         tasks = paginator.get_page(page)
@@ -80,10 +83,11 @@ def delete_task(request, id):
 
     return redirect('/')
 
+
 @login_required
 def change_status(request, id):
     task = get_object_or_404(Task, pk=id)
-    
+
     if (task.done == 'doing'):
         task.done = 'done'
     else:
